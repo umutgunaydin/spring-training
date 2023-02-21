@@ -1,0 +1,5 @@
+# Project exclude paths
+/spring-01-Core-IoC-Bean-Annotation/target/
+.idea
+*.iml
+*.xml
