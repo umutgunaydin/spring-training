@@ -1,2 +1,2 @@
 # spring-training
-* Consists of spring training modules
+Consists of spring training modules
