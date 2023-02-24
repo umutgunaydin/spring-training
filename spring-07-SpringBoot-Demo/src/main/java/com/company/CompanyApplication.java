@@ -21,6 +21,7 @@ public class CompanyApplication {
         commentService.publishComment(comment);
 
         commentService.printConfigData();
+        commentService.printDbConfigData();
 
     }
 
