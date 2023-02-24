@@ -20,6 +20,8 @@ public class CompanyApplication {
         CommentService commentService=container.getBean(CommentService.class);
         commentService.publishComment(comment);
 
+        commentService.printConfigData();
+
     }
 
 }
