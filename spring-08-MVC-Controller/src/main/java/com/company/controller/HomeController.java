@@ -6,9 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class HomeController {
 
-    @RequestMapping("/home")
+    @RequestMapping("/")// nothing and /
     public String getHomePage(){
         return "home.html";
+    }
+
+    @RequestMapping({"/apple","/orange"})
+    public String getMenuPage(){
+        return "menu.html";
     }
 
 }
