@@ -6,7 +6,7 @@
 </head>
 <body>
 <div align="center">
-<form th:object="${mentor}">
+<form th:action="@{/mentor/confirm}" method="post" th:object="${mentor}">
 
     <label>Firs Name:</label>
     <input type="text" th:field="*{firstName}"><br>
@@ -15,7 +15,7 @@
     <input type="text" th:field="*{lastName}"><br>
 
     <label>Email:</label>
-    <input type="text" th:field="*{email}"><br>
+    <input type="email" th:field="*{email}"><br>
 
     <label>Graduated:</label>
     <input type="checkbox" th:field="*{graduated}"><br>
@@ -31,6 +31,7 @@
 
     <label>Company:</label>
     <textarea th:field="*{company}"></textarea><br>
+
     <button type="submit">Register</button>
 
 </form>
