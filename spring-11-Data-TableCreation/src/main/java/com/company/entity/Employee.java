@@ -1,9 +1,12 @@
 package com.company.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import com.company.enums.Gender;
+import jakarta.persistence.*;
+
+import java.time.LocalDate;
 
 @Entity
+@Table(name = "employees")
 public class Employee {
 
     @Id
@@ -11,10 +14,11 @@ public class Employee {
     private String firstName;
     private String lastName;
     private String email;
-    private int age;
-    private String address;
-    private String city;
-    private String state;
+    @Column(columnDefinition = "DATE")
+    private LocalDate hireDate;
+    @Enumerated(EnumType.STRING)
+    private Gender gender;
+    private int salary;
 
 
 }
