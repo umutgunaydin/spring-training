@@ -1,3 +1,5 @@
+drop table if exists employees;
+
 create table employees
 (
 
