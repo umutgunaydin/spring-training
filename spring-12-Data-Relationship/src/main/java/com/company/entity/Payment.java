@@ -22,8 +22,11 @@ public class Payment {
     private BigDecimal amount;
     @Enumerated(EnumType.STRING)
     private Status status;
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+    @JoinColumn(name = "payment_detail_id")// this is the default one without annotation
     private PaymentDetail paymentDetail;
+    @ManyToOne
+    private Merchant merchant;
     public Payment(LocalDate createdDate, BigDecimal amount, Status status) {
         this.createdDate = createdDate;
         this.amount = amount;
