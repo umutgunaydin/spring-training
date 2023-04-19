@@ -16,13 +16,14 @@ public class Payment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
     @Column(columnDefinition = "DATE")
     private LocalDate createdDate;
     private BigDecimal amount;
     @Enumerated(EnumType.STRING)
     private Status status;
-
+    @OneToOne
+    private PaymentDetail paymentDetail;
     public Payment(LocalDate createdDate, BigDecimal amount, Status status) {
         this.createdDate = createdDate;
         this.amount = amount;
