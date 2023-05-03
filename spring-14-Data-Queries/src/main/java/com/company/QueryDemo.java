@@ -37,8 +37,8 @@ public class QueryDemo implements CommandLineRunner {
         System.out.println("findDistinctTop3ByDivisionIsContaining:"+departmentRepository.findDistinctTop3ByDivisionIsContaining("Hea"));
 
         System.out.println("***************EMPLOYEES**************");
-        System.out.println("findByEmail:"+employeeRepository.findByEmail(""));
-        System.out.println("findByFirstNameAndLastName:"+employeeRepository.findByFirstNameAndLastNameOOrEmail("","",""));
+        System.out.println("retrieveEmployeeDetail:"+employeeRepository.retrieveEmployeeDetail());
+        System.out.println("retrieveEmployeeSalary:"+employeeRepository.retrieveEmployeeSalary());
 
     }
 }

@@ -2,6 +2,7 @@ package com.company.repository;
 
 import com.company.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
@@ -15,7 +16,7 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
 
     //display all employees with firstNAme and lastName
     // also show all employees with an email address
-    List<Employee> findByFirstNameAndLastNameOOrEmail(String firstName,String lastName,String email);
+    List<Employee> findByFirstNameAndLastNameOrEmail(String firstName,String lastName,String email);
 
     //display all employees that first name is not ""
     List<Employee> findByFirstNameIsNot(String firstName);
@@ -42,5 +43,10 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     //display all employees that do not have email address
     List<Employee> findByEmailIsNull();
 
+    @Query("SELECT employee FROM Employee employee WHERE employee.email='amcnee1@google.es' ")
+    Employee retrieveEmployeeDetail();
+
+    @Query("SELECT employee.salary FROM Employee employee WHERE employee.email='amcnee1@google.es' ")
+    Integer retrieveEmployeeSalary();
 
 }
