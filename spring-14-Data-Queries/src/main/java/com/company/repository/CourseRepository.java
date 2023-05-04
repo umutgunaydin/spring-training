@@ -2,6 +2,8 @@ package com.company.repository;
 
 import com.company.entity.Course;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -30,6 +32,8 @@ public interface CourseRepository extends JpaRepository<Course,Long> {
     //find all courses by category and returns a stream -- derived
     Stream<Course> streamAllByCategory(String category);
 
-
+    //native query
+    @Query(value = "SELECT * FROM courses WHERE category= :category AND rating> :rating",nativeQuery = true)
+    List<Course> retrieveAllByCategoryAndRatingGreaterThan(@Param("category") String category,@Param("rating") int rating);
 
 }

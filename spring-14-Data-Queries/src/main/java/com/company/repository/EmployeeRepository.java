@@ -3,6 +3,7 @@ package com.company.repository;
 import com.company.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;
@@ -80,5 +81,20 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     //sorting in asc -- JPQL
     @Query("SELECT e FROM Employee e ORDER BY e.salary ASC ")
     List<Employee> retrieveEmployeeSalaryOrderAsc();
+
+
+    //native query *********
+    //positional parameter
+    @Query(value = "SELECT * FROM employees WHERE salary=?1",nativeQuery = true)
+    List<Employee> retrieveEmployeeDetailBySalary(int salary);
+
+    //native query *********
+    //name parameter
+    @Query(value = "SELECT * FROM employees WHERE salary= :salary",nativeQuery = true)
+    List<Employee> retrieveEmployeeSalary(@Param("salary") int salary);
+
+
+
+
 
 }
