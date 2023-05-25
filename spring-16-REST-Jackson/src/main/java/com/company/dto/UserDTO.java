@@ -1,6 +1,6 @@
-package com.cydeo.dto;
+package com.company.dto;
 
-import com.cydeo.enums.UserRole;
+import com.company.enums.UserRole;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonProperty;

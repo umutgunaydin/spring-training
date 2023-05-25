@@ -1,6 +1,6 @@
-package com.cydeo.service;
+package com.company.service;
 
-import com.cydeo.dto.UserDTO;
+import com.company.dto.UserDTO;
 
 import java.util.List;
 

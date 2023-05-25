@@ -1,9 +1,9 @@
-package com.cydeo.service.impl;
+package com.company.service.impl;
 
-import com.cydeo.dto.AccountDTO;
-import com.cydeo.repository.AccountRepository;
-import com.cydeo.service.AccountService;
-import com.cydeo.util.MapperUtil;
+import com.company.dto.AccountDTO;
+import com.company.service.AccountService;
+import com.company.util.MapperUtil;
+import com.company.repository.AccountRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

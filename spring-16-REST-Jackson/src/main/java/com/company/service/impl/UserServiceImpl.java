@@ -1,9 +1,9 @@
-package com.cydeo.service.impl;
+package com.company.service.impl;
 
-import com.cydeo.dto.UserDTO;
-import com.cydeo.repository.UserRepository;
-import com.cydeo.service.UserService;
-import com.cydeo.util.MapperUtil;
+import com.company.dto.UserDTO;
+import com.company.service.UserService;
+import com.company.util.MapperUtil;
+import com.company.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

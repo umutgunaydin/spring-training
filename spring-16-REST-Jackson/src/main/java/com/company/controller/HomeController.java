@@ -1,9 +1,9 @@
-package com.cydeo.controller;
+package com.company.controller;
 
-import com.cydeo.dto.AccountDTO;
-import com.cydeo.dto.UserDTO;
-import com.cydeo.service.AccountService;
-import com.cydeo.service.UserService;
+import com.company.dto.AccountDTO;
+import com.company.dto.UserDTO;
+import com.company.service.AccountService;
+import com.company.service.UserService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

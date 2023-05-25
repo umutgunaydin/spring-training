@@ -1,4 +1,4 @@
-package com.cydeo.dto;
+package com.company.dto;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
