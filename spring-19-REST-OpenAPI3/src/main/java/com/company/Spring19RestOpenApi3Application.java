@@ -22,6 +22,14 @@ public class Spring19RestOpenApi3Application {
         return new ModelMapper();
     }
 
+    @Bean
+    public OpenAPI customOpenApi(){
+        return new OpenAPI().info(new Info()
+                .title("Company Application OpenAPI")
+                .version("v1")
+                .description("Company application API documentation"))
+                .servers(List.of(new Server().url("https://dev.company.com").description("Dev Environment")));
 
+    }
 
 }
