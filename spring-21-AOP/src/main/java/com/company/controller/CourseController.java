@@ -1,6 +1,5 @@
 package com.company.controller;
 
-import com.company.annotation.LoggingAnnotation;
 import com.company.dto.CourseDTO;
 import com.company.service.CourseService;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +23,6 @@ public class CourseController {
         return list;
     }
 
-    @LoggingAnnotation
     @GetMapping("/{id}")
     public CourseDTO getCourseById(@PathVariable("id") Long courseId) {
         return courseService.getCourseById(courseId);
@@ -35,7 +33,6 @@ public class CourseController {
         return courseService.getCoursesByCategory(category);
     }
 
-    @LoggingAnnotation
     @PostMapping
     public CourseDTO createCourse(@RequestBody CourseDTO course) {
         return courseService.createCourse(course);
