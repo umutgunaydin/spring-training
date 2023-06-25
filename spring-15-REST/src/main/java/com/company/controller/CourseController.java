@@ -1,7 +1,7 @@
-package com.cydeo.controller;
+package com.company.controller;
 
-import com.cydeo.dto.CourseDTO;
-import com.cydeo.service.CourseService;
+import com.company.dto.CourseDTO;
+import com.company.service.CourseService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

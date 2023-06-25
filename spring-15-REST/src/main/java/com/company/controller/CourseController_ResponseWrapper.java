@@ -1,16 +1,13 @@
-package com.cydeo.controller;
+package com.company.controller;
 
-import com.cydeo.dto.CourseDTO;
-import com.cydeo.dto.ResponseWrapper;
-import com.cydeo.service.CourseService;
+import com.company.dto.ResponseWrapper;
+import com.company.service.CourseService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/courses/api/v3")

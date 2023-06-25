@@ -1,6 +1,6 @@
-package com.cydeo.service;
+package com.company.service;
 
-import com.cydeo.dto.CourseDTO;
+import com.company.dto.CourseDTO;
 
 import java.util.List;
 
